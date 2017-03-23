@@ -50,12 +50,14 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'capybara'
-  #gem 'poltergeist'
+  gem 'poltergeist'
   gem 'factory_girl'
   gem 'faker'
   gem 'simplecov', :require => false
   gem "factory_girl_rails", "~> 4.0"
   gem 'selenium-webdriver'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers'
 end
 
 group :development do

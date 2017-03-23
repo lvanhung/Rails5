@@ -1,3 +1,4 @@
+@javascript
 Feature: Sign up a user
   Scenario: sing up a user
     Given visit sign up page
