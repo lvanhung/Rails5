@@ -7,7 +7,7 @@ Feature: user authentication
 
   Scenario: user logs out
     Given I am signed in
-    And I click on "Logout" button
+    And I click on "Logout" link
     Then I should "Login" link
 
 

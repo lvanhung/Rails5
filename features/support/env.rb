@@ -39,7 +39,6 @@ end
 
 #this is for factory girl
 World(FactoryGirl::Syntax::Methods)
-
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
 # See the DatabaseCleaner documentation for details. Example:
 #

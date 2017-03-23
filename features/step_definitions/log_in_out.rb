@@ -24,10 +24,30 @@ Given(/^I am signed in$/) do
   click_button "Log in"
 end
 
-Given(/^I click on "([^"]*)" button$/) do |name|
-  click_link ('Logout')
+Given(/^I click on "([^"]*)" link$/) do |name|
+  click_link (name)
 end
+
+
 
 Then(/^I should "([^"]*)" link$/) do |arg1|
   page.should have_content('Login')
 end
+
+
+Given(/^visit sign up page$/) do
+  visit new_user_registration_path
+end
+
+Given(/^I fill out the sign up form$/) do
+  fill_in 'user_email' , with: 'hung@yopmail.com'
+  fill_in 'user_password', with: 'password'
+  fill_in 'user_password_confirmation', with: 'password'
+end
+
+Given(/^I click on "([^"]*)" button$/) do |name|
+  click_button (name)
+end
+
+
+
