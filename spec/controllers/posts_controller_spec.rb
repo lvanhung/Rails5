@@ -24,11 +24,12 @@ RSpec.describe PostsController, type: :controller do
   # Post. As you add validations to Post, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {title: 'title', content: 'content', user_id: FactoryGirl.create(:user).id}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {title: nil, content: nil, user: FactoryGirl.create(:user)}
+    #skip("Add a hash of attributes invalid for your model")
   }
 
   # This should return the minimal set of values that should be in the session
@@ -71,12 +72,13 @@ RSpec.describe PostsController, type: :controller do
     context "with valid params" do
       it "creates a new Post" do
         expect {
-          post :create, params: {post: valid_attributes}, session: valid_session
+          post :create, params: {post: valid_attributes}#, session: valid_session
         }.to change(Post, :count).by(1)
       end
 
       it "assigns a newly created post as @post" do
-        post :create, params: {post: valid_attributes}, session: valid_session
+        post :create, params: {post: valid_attributes}#, session: valid_session
+
         expect(assigns(:post)).to be_a(Post)
         expect(assigns(:post)).to be_persisted
       end

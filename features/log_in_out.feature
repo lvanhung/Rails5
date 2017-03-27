@@ -1,4 +1,4 @@
-@javascript
+@selenium
 Feature: user authentication
 
   Scenario: user logs in

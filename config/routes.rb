@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'books/index'
+
   resources :posts
+  resources :books
   devise_for :users
   # devise_for :users, controllers: {
   #     sessions: 'users/sessions'
