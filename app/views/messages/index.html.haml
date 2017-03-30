@@ -1,0 +1,17 @@
+.container
+  .message-table
+    - if @messages.any?
+      = render @messages
+    - else
+      %span no message
+  .message-form
+    = render 'message_form'
+
+:sass
+  .message-table
+    & .row
+      margin-bottom: 20px
+    margin-bottom: 50px
+    & .message
+      margin-bottom: 20px
+
