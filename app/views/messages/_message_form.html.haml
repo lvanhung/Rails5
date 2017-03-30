@@ -1,0 +1,11 @@
+.message-input.form-group
+  = form_for(@message, remote: true) do |f|
+    .form-group
+      = f.text_area :content
+    .form-group
+      = f.submit "Send", class: 'btn'
+
+:sass
+  .form-group
+    textarea
+      width: 350px

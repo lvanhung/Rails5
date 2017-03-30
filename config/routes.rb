@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'messages/create'
+
+  get 'messages/index'
+
   get 'books/index'
 
   resources :posts
   resources :books
+  resource :messages
   devise_for :users
   # devise_for :users, controllers: {
   #     sessions: 'users/sessions'

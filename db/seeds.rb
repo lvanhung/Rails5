@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Book.create(title: 'title1', price: 1000, author: 'author1')
-Book.create(title: 'title2', price: 1000, author: 'author2')
+Book.create(title: 'title1', price: 1000, description: 'description')
+Book.create(title: 'title2', price: 1000, description: 'description')

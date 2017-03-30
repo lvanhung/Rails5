@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "SignUps", type: :feature do
 
   feature "sign up" do
-    scenario "sign up an account", js: true do
+    scenario "sign up an account" do
 
       visit new_user_registration_path
 
@@ -17,7 +17,7 @@ RSpec.feature "SignUps", type: :feature do
 
     end
 
-    scenario "sign up fail", js: true do
+    scenario "sign up fail" do
       visit new_user_registration_path
 
       fill_in 'user_email' , with: 'hung@yopmail.com'

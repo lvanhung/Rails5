@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "SignInOuts", type: :feature do
-  feature 'sign in', js: true do
+  feature 'sign in' do
     # background do
     #   User.create(email: "hung@yopmail.com", password: 'password')
     # end
